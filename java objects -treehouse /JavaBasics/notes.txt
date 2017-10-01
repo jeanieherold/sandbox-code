@@ -1,0 +1,43 @@
+// to run the program on the console:
+//if you want to stop running the program control-C 
+
+➜  JavaBasics javac Introductions.java  //compiles the program
+➜  JavaBasics ls
+Introductions.class Introductions.java
+➜  JavaBasics java Introductions  //runs the program
+Hello, my name is Jeanei%
+➜  JavaBasics
+
+// escape sequence
+\n
+
+//using string --> put %s where you want the strong var to go and then , after the " and then the variable name
+console.printf("Hello, my name is %s\n", firstName);
+
+//1st video code
+import java.io.Console;
+
+public class Introductions {
+
+    public static void main(String[] args) {
+        Console console = System.console();
+        //Welcome to the Introductions program! Your code goes below here
+        String firstName = "Sherlock";
+        console.printf("Hello, my name is %s\n", firstName);
+        console.printf("%s is learning how to write Java\n", firstName);
+    }
+}
+
+//2nd -> interacting - input and output using stored variables
+import java.io.Console;
+
+public class Introductions {
+
+    public static void main(String[] args) {
+        Console console = System.console();
+        //Welcome to the Introductions program! Your code goes below here
+        String firstName = console.readLine("What is your name? ");
+        console.printf("Hello, my name is %s\n", firstName);
+        console.printf("%s is learning how to write Java\n", firstName);
+    }
+}
