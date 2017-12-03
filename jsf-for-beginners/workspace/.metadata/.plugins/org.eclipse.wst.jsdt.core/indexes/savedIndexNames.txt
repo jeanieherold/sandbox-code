@@ -1,6 +1,0 @@
-INDEX VERSION 1.4+/Users/jeanieherold/jsf-for-beginners/workspace/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
-2808092456.index
-392253563.index
-1416895616.index
-3941210015.index
-3070904283.index
