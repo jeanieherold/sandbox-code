@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:p="http://primefaces.org/ui">
+	
+	<h:head>
+	  	<title>Student List Demo</title>
+		<h:outputStylesheet library="css" name="styles.css"  />
+	</h:head>
+	<h:body>
+		<h3>Student List Demo</h3>
+		<hr/>
+		
+		<ul>
+			<ui:repeat var="tempStudent" value="#{studentDataUtil.students}">
+				<li>#{tempStudent.firstName} #{tempStudent.lastName}</li>
+			</ui:repeat>
+		</ul>
+		
+		<hr/>
+		<h4>Primefaces Carousel from Array Example</h4>
+		<hr/>
+			<p:carousel value="#{studentDataUtil.students}" headerText="Responsive" var="tempStudent" itemStyle="text-align:center" responsive="true">
+	        <p:panelGrid columns="2" style="width:100%;margin:10px 0px" columnClasses="label,value" layout="grid" styleClass="ui-panelgrid-blank">
+	            <f:facet name="header">
+	                <p:outputPanel>HeaderHere</p:outputPanel> 
+	            </f:facet>
+	 
+	            <h:outputText value="First name:" />
+	            <h:outputText value="#{tempStudent.firstName}" />
+	 
+	            <h:outputText value="Last Name" />
+	            <h:outputText value="#{tempStudent.lastName}" />
+	 
+	            <h:outputText value="Email:" />
+	            <h:outputText value="#{tempStudent.email}" style="color:#{car.color}"/>
+	        </p:panelGrid>
+	    </p:carousel>
+		
+	</h:body>
+</html>
